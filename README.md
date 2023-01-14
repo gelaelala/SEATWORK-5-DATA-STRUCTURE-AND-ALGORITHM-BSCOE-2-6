@@ -1,5 +1,4 @@
 # SEATWORK-5-DATA-STRUCTURE-AND-ALGORITHM-BSCOE-2-6
-Seatwork about Binary Tree
 
 Video References:
 
