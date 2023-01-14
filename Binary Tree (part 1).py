@@ -66,3 +66,5 @@ if __name__ == '__main__':
 
     print ("UK is in the list? ", country_tree.search("UK"))
     print ("Sweden is in the list? ", country_tree.search("Sweden"))
+
+    print (country_tree.in_order_traversal())
