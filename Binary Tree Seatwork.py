@@ -91,6 +91,10 @@ class BinarySearchTreeNode:
             self.data = min_val
             self.right = self.right.delete(min_val)
 
+            max_val = self.left.find_max()
+            self.data = max_val
+            self.left = self.left.delete(max_val)
+
         return self
 
     def search (self, val):
@@ -125,7 +129,11 @@ if __name__ == '__main__':
     print ("Post Order Traversal:", letters_tree.post_order_traversal())
     print ("Maximum:", letters_tree.find_max())
     print ("Minimum:", letters_tree.find_min())
+
+    #for searching a certain element
     
+    print ("Is letter O present in the list? ", letters_tree.search('O'))
+    print ("Is letter H present in the list? ", letters_tree.search('H'))
 
     #for deleting elements
 
