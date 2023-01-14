@@ -57,3 +57,11 @@ class BinarySearchTreeNode:
         if self.left is None:
             return self.data
         return self.left.find_min()
+
+def build_tree(elements):
+    root = BinarySearchTreeNode(elements[0])
+
+    for i in range (1,len(elements)):
+        root.add_child(elements[i])
+
+    return root 
