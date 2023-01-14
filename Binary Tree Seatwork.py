@@ -127,19 +127,19 @@ if __name__ == '__main__':
     print ("In Order Traversal:", letters_tree.in_order_traversal())
     print ("Pre order Traversal:", letters_tree.pre_order_traversal())
     print ("Post Order Traversal:", letters_tree.post_order_traversal())
+    print ("\nMinimum:", letters_tree.find_min())
     print ("Maximum:", letters_tree.find_max())
-    print ("Minimum:", letters_tree.find_min())
 
     #for searching a certain element
     
-    print ("Is letter O present in the list? ", letters_tree.search('O'))
-    print ("Is letter H present in the list? ", letters_tree.search('H'))
+    print ("\nIs letter O present in the list? ", letters_tree.search('O'))
+    print ("Is letter M present in the list? ", letters_tree.search('M'))
 
     #for deleting elements
 
     letters_tree = build_tree(["A", "N", "G", "E", "L", "A", "E", "C", "O", "R", "P", "U", "Z"])
-    letters_tree.delete ('A')
-    print ("After deleting the letter A:", letters_tree.in_order_traversal())
+    letters_tree.delete ('E')
+    print ("\nAfter deleting the letter E:", letters_tree.in_order_traversal())
 
     letters_tree = build_tree(["A", "N", "G", "E", "L", "A", "E", "C", "O", "R", "P", "U", "Z"])
     letters_tree.delete ('Z')
