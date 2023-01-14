@@ -44,6 +44,16 @@ class BinarySearchTreeNode:
 
         return elements
 
+    def pre_order_traversal (self):
+        elements = [self.data]
+
+        if self.left:
+            elements += self.left.pre_order_traversal()
+        if self.right:
+            elements += self.right.pre_order_traversal()
+
+        return elements 
+
     def search (self, val):
         if self.data == val:
             return True
@@ -73,4 +83,6 @@ if __name__ == '__main__':
     numbers_tree = build_tree(numbers)
 
     print ("Input numbers: ", numbers)
+    print ("In-Order Traversal: ", numbers_tree.in_order_traversal())
+    print ("Pre-Order Traversal: ", numbers_tree.pre_order_traversal())
     print ("Post Order Traversal: ", numbers_tree.post_order_traversal())
