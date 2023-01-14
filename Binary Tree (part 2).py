@@ -58,6 +58,8 @@ class BinarySearchTreeNode:
             return self.data
         return self.left.find_min()
 
+    def delete (self, val):
+
 def build_tree(elements):
     root = BinarySearchTreeNode(elements[0])
 
