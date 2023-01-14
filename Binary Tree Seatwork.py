@@ -116,3 +116,24 @@ def build_tree (elements):
         root.add_child(elements[i])
 
     return root
+
+if __name__ == '__main__':
+    letters_tree = build_tree(['A', 'N', 'G', 'E', 'L', 'A', 'E', 'C', 'O', 'R', 'P', 'U', 'Z'])
+
+    print ("In Order Traversal:", letters_tree.in_order_traversal())
+    print ("Pre order Traversal:", letters_tree.pre_order_traversal())
+    print ("Post Order Traversal:", letters_tree.post_order_traversal())
+    print ("Maximum:", letters_tree.find_max())
+    print ("Minimum:", letters_tree.find_min())
+    
+
+    #for deleting elements
+
+    letters_tree = build_tree(['A', 'N', 'G', 'E', 'L', 'A', 'E', 'C', 'O', 'R', 'P', 'U', 'Z'])
+    letters_tree.delete ('A')
+    print ("After deleting the letter A:", letters_tree.in_order_traversal())
+
+    letters_tree = build_tree(['A', 'N', 'G', 'E', 'L', 'A', 'E', 'C', 'O', 'R', 'P', 'U', 'Z'])
+    letters_tree.delete ('Z')
+    print ("After deleting the letter Z:", letters_tree.in_order_traversal())
+
