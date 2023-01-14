@@ -55,3 +55,7 @@ def build_tree (elements):
         root.add_child(elements[i])
 
     return root 
+
+if __name__ == '__main__':
+    numbers = [17, 4, 1, 20, 9, 23, 18, 34]
+    numbers_tree = build_tree(numbers)
