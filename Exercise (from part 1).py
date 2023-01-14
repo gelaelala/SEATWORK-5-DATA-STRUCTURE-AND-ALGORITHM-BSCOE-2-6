@@ -32,6 +32,18 @@ class BinarySearchTreeNode:
 
         return elements
 
+    def post_order_traversal (self):
+        elements = []
+
+        if self.left:
+            elements += self.left.post_order_traversal()
+        if self.right:
+            elements += self.right.post_order_traversal()
+
+        elements.append (self.data)
+
+        return elements
+
     def search (self, val):
         if self.data == val:
             return True
@@ -59,3 +71,6 @@ def build_tree (elements):
 if __name__ == '__main__':
     numbers = [17, 4, 1, 20, 9, 23, 18, 34]
     numbers_tree = build_tree(numbers)
+
+    print ("Input numbers: ", numbers)
+    print ("Post Order Traversal: ", numbers_tree.post_order_traversal())
