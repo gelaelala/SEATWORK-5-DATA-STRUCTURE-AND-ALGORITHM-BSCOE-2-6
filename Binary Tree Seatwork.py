@@ -85,11 +85,11 @@ class BinarySearchTreeNode:
             elif self.left is None:
                 return self.right
             elif self.right is None:
-                return self.right
+                return self.left
 
-            min_val = self.right.find_min()
-            self.data = min_val
-            self.right = self.right.delete(min_val)
+            #min_val = self.right.find_min()
+            #self.data = min_val
+            #self.right = self.right.delete(min_val)
 
             max_val = self.left.find_max()
             self.data = max_val
@@ -122,7 +122,7 @@ def build_tree (elements):
     return root
 
 if __name__ == '__main__':
-    letters_tree = build_tree(['A', 'N', 'G', 'E', 'L', 'A', 'E', 'C', 'O', 'R', 'P', 'U', 'Z'])
+    letters_tree = build_tree(["A", "N", "G", "E", "L", "A", "E", "C", "O", "R", "P", "U", "Z"])
 
     print ("In Order Traversal:", letters_tree.in_order_traversal())
     print ("Pre order Traversal:", letters_tree.pre_order_traversal())
@@ -137,11 +137,10 @@ if __name__ == '__main__':
 
     #for deleting elements
 
-    letters_tree = build_tree(['A', 'N', 'G', 'E', 'L', 'A', 'E', 'C', 'O', 'R', 'P', 'U', 'Z'])
+    letters_tree = build_tree(["A", "N", "G", "E", "L", "A", "E", "C", "O", "R", "P", "U", "Z"])
     letters_tree.delete ('A')
     print ("After deleting the letter A:", letters_tree.in_order_traversal())
 
-    letters_tree = build_tree(['A', 'N', 'G', 'E', 'L', 'A', 'E', 'C', 'O', 'R', 'P', 'U', 'Z'])
+    letters_tree = build_tree(["A", "N", "G", "E", "L", "A", "E", "C", "O", "R", "P", "U", "Z"])
     letters_tree.delete ('Z')
     print ("After deleting the letter Z:", letters_tree.in_order_traversal())
-
